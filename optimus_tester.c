@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/17 11:01:50 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/17 13:03:05 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1060,6 +1060,57 @@ int	memcpy_tester(void)
 	return (ret);
 }
 
+int	memccpy_tester(void)
+{
+	int ret;
+	int i = 0;
+	//test1
+	printf("*************\n");
+	char str[] = "ZADINE N10";
+	char str2[] = "ZADINE N10";
+	char str3[] = "Zidane n10";
+	if (strcmp((char *)memccpy(str,str3, ' ', 10), (char *)ft_memccpy(str2,str3, ' ', 10)))
+		return (0);
+	else if (strcmp(str, str2))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	//test2
+	char str4[] = "ZADINE N10";
+	char str5[] = "ZADINE N10";
+	char str6[] = "Zidane n10";
+	 if (!((char *)memccpy(str4,str6, -4, 10) == NULL && (char *)ft_memccpy(str5,str6, -4, 10) == NULL))
+		return (0);
+	else if (strcmp(str4, str5))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 2 : ✅*\n");
+	
+	//test3
+	i = 0;
+	int tab4[] = {1, 1, 2, 0, 4, 5, 6, 7, 8, 9};
+	int tab5[] = {1, 1, 2, 0, 4, 5, 6, 7, 8, 9};
+	int tab6[] = {42, 42, 42, 42, 42, 42, 42, 42, 42, 42};
+	int *tst = (int *)memccpy(tab4, tab6, 0, sizeof(int) * 10);
+	int *tst2 = (int *)ft_memccpy(tab5, tab6, 0, sizeof(int) * 10);
+	if (tst[0] != tst2[0])
+		return (0);
+	while (i < 10)
+	{
+		if (tab4[i] != tab5[i])
+			return (0);
+		i++;
+	}
+	ret = 1;
+	printf("*test 3 : ✅*\n");
+
+	printf("*************\n\n");
+	return (ret);
+}
+
 int	main(void)
 {
 	//test for strcat
@@ -1206,5 +1257,10 @@ int	main(void)
 	else
 		printf("ft_memcpy = 🙅\n\n");
 
+	//test for memccpy
+	if (memccpy_tester())
+		printf("ft_memccpy = ✅\n\n");
+	else
+		printf("ft_memccpy = 🙅\n\n");
 	return (0);
 }
