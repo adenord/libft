@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/17 18:35:47 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/17 19:13:07 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1204,6 +1204,29 @@ int	memmove_tester(void)
 	return (ret);
 }
 
+int	memchr_tester(void)
+{
+	int ret;
+	//test1
+	printf("*************\n");
+	char str[] = "Zidane n10";
+	if (strcmp((char *)memchr(str, 'a', 10), (char *)ft_memchr(str, 'a', 10)))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	//test2
+	char str2[] = "Zidane n10";
+	if (memchr(str2, 'q', 10) != NULL || ft_memchr(str2, 'q', 10) != NULL)
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 2 : ✅*\n");
+	printf("*************\n\n");
+	return (ret);
+}
+
 int	main(void)
 {
 	//test for strcat
@@ -1361,5 +1384,12 @@ int	main(void)
 		printf("ft_memmove = ✅\n\n");
 	else
 		printf("ft_memmove = 🙅\n\n");
+
+	//test for memchr
+	if (memchr_tester())
+		printf("ft_memchr = ✅\n\n");
+	else
+		printf("ft_memchr = 🙅\n\n");
+
 	return (0);
 }
