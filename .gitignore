@@ -1,0 +1,5 @@
+*.o
+*.a
+*.sh
+a.out
+.DS_Store
