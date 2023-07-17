@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/17 13:03:05 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/17 18:35:47 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1111,6 +1111,99 @@ int	memccpy_tester(void)
 	return (ret);
 }
 
+int	memmove_tester(void)
+{
+	int ret;
+	int i = 0;
+	//test1
+	printf("*************\n");
+	int tab[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+	int tab2[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+	void *source = (void *)tab;
+	void *dest = (void *)(tab + 1);
+	void *source2 = (void *)tab2;
+	void *dest2 = (void *)(tab2 + 1);
+	ft_memmove(dest, source, sizeof(int) * 9);
+	memmove(dest2, source2, sizeof(int) * 9);
+	while (i < 10)
+	{
+		if (tab[i] != tab2[i])
+			return (0);
+		i++;
+	}
+	ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	//test2
+	int tab3[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+	int tab4[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+	void *source3 = (void *)(tab3 + 1);
+	void *dest3 = (void *)(tab3);
+	void *source4 = (void *)(tab4 + 1);
+	void *dest4 = (void *)(tab4);
+	ft_memmove(dest3, source3, sizeof(int) * 9);
+	memmove(dest4, source4, sizeof(int) * 9);
+	while (i < 10)
+	{
+		if (tab3[i] != tab4[i])
+			return (0);
+		i++;
+	}
+	ret = 1;
+	printf("*test 2 : ✅*\n");
+
+	// //test3
+	int tab5[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+	int tab6[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+	void *source5 = (void *)tab5;
+	void *dest5 = (void *)(tab5 + 4);
+	void *source6 = (void *)tab6;
+	void *dest6 = (void *)(tab6 + 4);
+	ft_memmove(dest5, source5, sizeof(int) * 9);
+	memmove(dest6, source6, sizeof(int) * 9);
+	while (i < 10)
+	{
+		if (tab5[i] != tab6[i])
+			return (0);
+		i++;
+	}
+	ret = 1;
+	printf("*test 3 : ✅*\n");
+
+	int tab7[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+	int tab8[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+	void *source7 = (void *)(tab7 + 1);
+	void *dest7 = (void *)(tab7);
+	void *source8 = (void *)(tab8 + 1);
+	void *dest8 = (void *)(tab8);
+	ft_memmove(dest7, source7, sizeof(int) * 9);
+	memmove(dest8, source8, sizeof(int) * 9);
+	while (i < 10)
+	{
+		if (tab7[i] != tab8[i])
+			return (0);
+		i++;
+	}
+	ret = 1;
+	printf("*test 4 : ✅*\n");
+
+	int tab9[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+	int tab10[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+	int tab11[] = {0, 2, 8, 4, 8, 3, 7, 8, 9, 8};
+	ft_memmove(tab9, tab11, sizeof(int) * 9);
+	memmove(tab10, tab11, sizeof(int) * 9);
+	while (i < 10)
+	{
+		if (tab9[i] != tab10[i])
+			return (0);
+		i++;
+	}
+	ret = 1;
+	printf("*test 5 : ✅*\n");
+	printf("*************\n\n");
+	return (ret);
+}
+
 int	main(void)
 {
 	//test for strcat
@@ -1262,5 +1355,11 @@ int	main(void)
 		printf("ft_memccpy = ✅\n\n");
 	else
 		printf("ft_memccpy = 🙅\n\n");
+
+	//test for memmove
+	if (memmove_tester())
+		printf("ft_memmove = ✅\n\n");
+	else
+		printf("ft_memmove = 🙅\n\n");
 	return (0);
 }
