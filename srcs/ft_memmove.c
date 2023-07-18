@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 13:09:10 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/17 18:00:18 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/18 10:22:18 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = len;
 	if (src == dst)
 		return (dst);
-	if (dst >= src && dst <= (src + len))
+	if (dst > src && dst <= (src + len))
 	{
 		while (i > 0)
 		{

@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/17 19:13:07 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/18 18:14:21 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <unistd.h>
 
 int	strcat_tester(void)
 {
@@ -322,7 +323,7 @@ int	strlcat_tester(void)
 	
 	//test7
 	
-	char str13[10] = "", str14[10] = "";
+	char str13[10], str14[10];
 	if (ft_strlcat(str13, "Zidane n10", 10) != strlcat(str14, "Zidane n10", 10))
 		return (0);
 	else if (strcmp(str13, str14))
@@ -350,6 +351,19 @@ int	strlcat_tester(void)
 	else 
 		ret = 1;
 	printf("*test 9 : ✅*\n");
+
+	//test10
+	char *str19 = (char *)malloc(sizeof(*str19) * 15);
+	char *str20 = (char *)malloc(sizeof(*str20) * 15);
+	memset(str19, 'r', 15);
+	memset(str20, 'r', 15);
+	if (ft_strlcat(str19, "lorem ipsum dolor sit amet", 5) != strlcat(str20, "lorem ipsum dolor sit amet", 5))
+		return (0);
+	else if (strcmp(str19, str20))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 10 : ✅*\n");
 	printf("*************\n\n");
 
 	return (ret);
@@ -420,6 +434,14 @@ int	strncmp_tester(void)
 		ret = 1;
 	
 	printf("*test 8 : ✅*\n");
+
+	//test9
+	if (ft_strncmp("Zidane n1\200", "Zidane n1\0", 10) <= 0 || strncmp("Zidane n1\200", "Zidane n1\0", 10) <= 0)
+		return (0);
+	else
+		ret = 1;
+	
+	printf("*test 9 : ✅*\n");
 	printf("*************\n\n");
 
 	return (ret);
@@ -590,6 +612,13 @@ int	atoi_tester(void)
 	else 
 		ret = 1;
 	printf("*test 6 : ✅*\n");
+
+	//test7
+	if (ft_atoi("546:5") != atoi("546:5"))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 7 : ✅*\n");
 	printf("*************\n\n");
 	return (ret);
 }
@@ -803,6 +832,13 @@ int	strnstr_tester(void)
 	else 
 		ret = 1;
 	printf("*test 6 : ✅*\n");
+
+	//test7
+	if (ft_strnstr("lorem ipsum dolor sit amet", "ipsumm", 30) != strnstr("lorem ipsum dolor sit amet", "ipsumm", 30))
+		return (0);
+	ret = 1;
+	printf("*test 7 : ✅*\n");
+
 	printf("*************\n\n");
 	return (ret);
 }
@@ -835,6 +871,22 @@ int	strchr_tester(void)
 	else 
 		ret = 1;
 	printf("*test 3 : ✅*\n");
+
+	//test4
+	char str4[] = "Zidane n10";
+	if (strcmp(ft_strchr(str4, '\0'), strchr(str4, '\0')))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 4 : ✅*\n");
+
+	//test5
+	char str5[] = "";
+	if (strcmp(ft_strchr(str5, '\0'), strchr(str5, '\0')))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 5 : ✅*\n");
 	printf("*************\n\n");
 	return (ret);
 }
@@ -879,8 +931,10 @@ int	memset_tester(void)
 	printf("*************\n");
 	char str[] = "Zidane n10";
 	char str2[] = "Zidane n10";
-	memset(str, '.', sizeof(char) * 4);
-	ft_memset(str2, '.', sizeof(char) * 4);
+	char *ts = (char *)memset(str, '.', sizeof(char) * 4);
+	char *ts2 = (char *)ft_memset(str2, '.', sizeof(char) * 4);
+	if (strcmp(ts, ts2))
+		return 0;
 	if (strcmp(str, str2))
 		return (0);
 	else 
@@ -1014,7 +1068,7 @@ int	memcpy_tester(void)
 	//test1
 	printf("*************\n");
 	char str[] = "ZADINE N10";
-	 char str2[] = "ZADINE N10";
+	char str2[] = "ZADINE N10";
 	char str3[] = "Zidane n10";
 	if (strcmp((char *)memcpy(str, str3, sizeof(char) * 10), (char *)ft_memcpy(str2, str3, sizeof(char) * 10)))
 		return (0);
@@ -1055,6 +1109,17 @@ int	memcpy_tester(void)
 	}
 	ret = 1;
 	printf("*test 3 : ✅*\n");
+
+	//test 4
+	char string[11] = "Zidane n10";
+	char string2[11] = "Zidane n10";
+	char *ts = (char *)memcpy(string, "ZADINE N11", sizeof(char) * 10);
+	char *ts2 = (char *)ft_memcpy(string2, "ZADINE N11", sizeof(char) * 10);
+	if (strcmp(ts, ts2))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 4 : ✅*\n");
 
 	printf("*************\n\n");
 	return (ret);
@@ -1223,6 +1288,99 @@ int	memchr_tester(void)
 	else 
 		ret = 1;
 	printf("*test 2 : ✅*\n");
+
+	//test3
+	int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
+	int tab2[7] = {-49, 49, 1, -1, 0, -2, 2};
+	if (strcmp((char *)memchr(tab, -1, 7), (char *)ft_memchr(tab2, -1, 7)))
+		return (0);
+	ret = 1;
+	printf("*test 3 : ✅*\n");
+	printf("*************\n\n");
+	return (ret);
+}
+
+int	memcmp_tester(void)
+{
+	int ret;
+	//test1
+	printf("*************\n");
+	char str[] = "Zidane n10";
+	char str2[] = "Zidane n10";
+	if (memcmp(str, str2, 10) != ft_memcmp(str, str2, 10))
+		return (0);
+	else
+		ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	//test2
+	char str3[] = "Zidane n10";
+	char str4[] = "Zidane n11";
+	if (memcmp(str3, str4, 10) != ft_memcmp(str3, str4, 10))
+		return (0);
+	else
+		ret = 1;
+	printf("*test 2 : ✅*\n");
+
+	//test3
+	char str5[] = "Zidane n10";
+	char str6[] = "Zidane n1";
+	if (memcmp(str5, str6, 10) != ft_memcmp(str5, str6, 10))
+		return (0);
+	else
+		ret = 1;
+	printf("*test 3 : ✅*\n");
+
+	//test4
+	char str7[] = "Zidane n1";
+	char str8[] = "Zidane n10";
+	if (memcmp(str7, str8, 10) != ft_memcmp(str7, str8, 10))
+		return (0);
+	else
+		ret = 1;
+	printf("*test 4 : ✅*\n");
+
+	//test5
+	char str9[] = "ZidAne n10";
+	char str10[] = "Zidane n10";
+	if (memcmp(str9, str10, 10) != ft_memcmp(str9, str10, 10))
+		return (0);
+	else
+		ret = 1;
+	printf("*test 5 : ✅*\n");
+
+	//test6
+	int tab[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+	int tab2[] = {0, 1, 2, 3, 5, 5, 6, 7, 8, 9};
+	if (memcmp(tab, tab2, sizeof(int) * 10) != ft_memcmp(tab, tab2, sizeof(int) * 10))
+		return (0);
+	else
+		ret = 1;
+	printf("*test 6 : ✅*\n");
+
+	//test7
+	char str11[] = "Zidane.n10";
+	char str12[] = "Zidane n10";
+	if (memcmp(str11, str12, 6) != ft_memcmp(str11, str12, 6))
+		return (0);
+	else
+		ret = 1;
+	printf("*test 7 : ✅*\n");
+
+	//test8
+	if (memcmp("t\200", "t\0", 2) <= 0 || ft_memcmp("t\200", "t\0", 2) <= 0)
+		return (0);
+	else
+		ret = 1;
+	printf("*test 8 : ✅*\n");
+
+	//test9
+	if (ft_memcmp("t", "a", 0) != 0)
+		return (0);
+	else
+		ret = 1;
+	printf("*test 9 : ✅*\n");
+
 	printf("*************\n\n");
 	return (ret);
 }
@@ -1390,6 +1548,12 @@ int	main(void)
 		printf("ft_memchr = ✅\n\n");
 	else
 		printf("ft_memchr = 🙅\n\n");
+
+	//test for memcmp
+	if (memcmp_tester())
+		printf("ft_memcmp = ✅\n\n");
+	else
+		printf("ft_memcmp = 🙅\n\n");
 
 	return (0);
 }

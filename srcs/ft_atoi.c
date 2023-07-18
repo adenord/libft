@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 15:28:55 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/13 15:57:42 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/18 10:38:49 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_atoi(const char *str)
 	while (str[i] >= 48 && str[i] <= 57)
 	{
 		ret += (str[i] - 48);
-		if (str[i + 1] >= 48 && str[i] <= 57)
+		if (str[i + 1] >= 48 && str[i + 1] <= 57)
 			ret *= 10;
 		i++;
 	}

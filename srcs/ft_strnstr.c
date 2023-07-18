@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 08:35:07 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/15 13:39:32 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/18 16:00:04 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	y = 0;
 	if (ft_strlen(needle) == 0)
 		return ((char *)haystack);
-	while (i < len)
+	while (i < len && haystack[i])
 	{
 		while (haystack[i] == needle[y] && i < len)
 		{
