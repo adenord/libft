@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/18 19:27:31 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/19 00:26:15 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1121,6 +1121,12 @@ int	memcpy_tester(void)
 		ret = 1;
 	printf("*test 4 : ✅*\n");
 
+	//test 5
+	char *test = (char *)ft_memcpy((void *)0, (void *)0, 3);
+	if (test != NULL)
+		return (0);
+	ret = 1;
+	printf("*test 5 : ✅*\n");
 	printf("*************\n\n");
 	return (ret);
 }
