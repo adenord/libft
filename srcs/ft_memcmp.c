@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 23:31:08 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/18 16:15:00 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/18 18:43:45 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char c1;
-	unsigned char c2;
+	unsigned char	c1;
+	unsigned char	c2;
 
 	if (n == 0)
 		return (0);

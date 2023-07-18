@@ -6,16 +6,20 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 13:40:17 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/13 10:17:33 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/18 19:32:42 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	int	i;
+	int				i;
+	unsigned char	c1;
+	unsigned char	c2;
 
 	i = 0;
 	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
-	return (s1[i] - s2[i]);
+	c1 = (unsigned char)s1[i];
+	c2 = (unsigned char)s2[i];
+	return (c1 - c2);
 }

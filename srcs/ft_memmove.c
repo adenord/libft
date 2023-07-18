@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 13:09:10 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/18 10:22:18 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/18 18:44:57 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	void *ret;
+	void	*ret;
 
 	ret = dst;
 	while (n > 0)

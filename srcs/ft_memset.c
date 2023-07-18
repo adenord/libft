@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 15:11:56 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/18 16:33:42 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/18 18:44:38 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	void *ret;
+	void	*ret;
 
 	ret = b;
 	while (len > 0)

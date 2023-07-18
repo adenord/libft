@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 11:46:54 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/18 10:24:19 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/18 19:28:29 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		n--;
 	}
 	if (n > 0)
+	{
+		*(char *)dst = *(char *)src;
 		return (dst + 1);
+	}
 	return (NULL);
 }
