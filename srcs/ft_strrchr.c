@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 14:02:21 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/19 10:38:36 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/19 10:45:53 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == chr)
 			return ((char *)&s[i]);
 		i--;
 	}
