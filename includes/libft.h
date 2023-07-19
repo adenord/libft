@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 15:56:09 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/17 23:42:12 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/19 10:56:36 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ size_t		ft_strlen(const char *s);
 char		*ft_strdup(const char *s1);
 char		*ft_strcpy(char *dst, const char *src);
 char		*ft_strncpy(char *dst, const char *src, size_t len);
+size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char		*ft_strcat(char *s1, const char *s2);
 char		*ft_strncat(char *s1, const char *s2, size_t n);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);

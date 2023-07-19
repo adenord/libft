@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/19 00:31:24 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/19 11:22:11 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1400,6 +1400,63 @@ int	memcmp_tester(void)
 	return (ret);
 }
 
+int	strlcpy_tester(void)
+{
+	int ret;
+
+	//test1
+	printf("*************\n");
+	char str[15] , str3[15];
+	char str2[] = "Zidane n10";
+	ft_strlcpy(str, str2, 11); strlcpy(str3, str2, 11);
+	if (strcmp(str, str3))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	//test2
+	char str4[15] , str5[15];
+	char str6[] = "";
+	ft_strlcpy(str4, str6, 11); strlcpy(str5, str6, 11);
+	if (strcmp(str4, str5))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 2 : ✅*\n");
+	
+	//test3
+	char str7[15] , str8[15];
+	char str9[] = "Zinedine n 10";
+	ft_strlcpy(str7, str9, 3); strlcpy(str8, str9, 3);
+	if (strcmp(str7, str8))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 3 : ✅*\n");
+
+	//test4
+	char str10[10] , str11[10];
+	char str12[] = "Zidane n10";
+	ft_strlcpy(str10, str12, 10); strlcpy(str11, str12, 10);
+	if (strcmp(str10, str11))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 4 : ✅*\n");
+
+	//test5
+	char str13[10] = "" , str14[10] = "";
+	ft_strlcpy(str13, "Zinedine", 0); strlcpy(str14, "Zinedine", 0);
+	if (strcmp(str13, str14))
+		return (0);
+	else 
+		ret = 1;
+	printf("*test 5 : ✅*\n");
+	printf("*************\n\n");
+	return (ret);
+}
+
 int	main(void)
 {
 	//test for strcat
@@ -1569,6 +1626,12 @@ int	main(void)
 		printf("ft_memcmp = ✅\n\n");
 	else
 		printf("ft_memcmp = 🙅\n\n");
+
+	//test for strlcpy
+	if (strlcpy_tester())
+		printf("ft_strlcpy = ✅\n\n");
+	else
+		printf("ft_strlcpy = 🙅\n\n");
 
 	return (0);
 }
