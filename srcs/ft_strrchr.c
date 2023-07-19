@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 14:02:21 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/15 14:58:57 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/19 10:38:36 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ static int	ft_strlen(const char *str)
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int				i;
+	unsigned char	chr;
 
+	chr = (unsigned char)c;
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
