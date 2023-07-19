@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/19 13:37:23 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/19 15:48:56 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <unistd.h>
+#include <limits.h>
 
 int	strcat_tester(void)
 {
@@ -1460,8 +1461,9 @@ int	strlcpy_tester(void)
 int	calloc_tester(void)
 {
 	int ret;
-	//test1
 	printf("*************\n");
+
+	//test1
 	int *tab;
 	tab = (int *)ft_calloc(5, sizeof(int));
 	int i = 0;
@@ -1473,6 +1475,70 @@ int	calloc_tester(void)
 	}
 	ret = 1;
 	printf("*test 1 : ✅*\n");
+
+	//test2
+	int *tab1;
+	tab1 = (int *)ft_calloc(0, 0);
+	if (tab1 == NULL)
+		return 0;
+	ret = 1;
+	printf("*test 2 : ✅*\n");
+
+	//test3
+	int *tab2;
+	tab2 = (int *)ft_calloc(-5, 0);
+	if (tab2 == NULL)
+		return 0;
+	ret = 1;
+	printf("*test 3 : ✅*\n");
+
+	//test4
+	int *tab3;
+	tab3 = (int *)ft_calloc(0, -5);
+	if (tab3 == NULL)
+		return 0;
+	ret = 1;
+	printf("*test 4 : ✅*\n");
+
+	//test5
+	int *tab5;
+	tab5 = (int *)ft_calloc(-5, -5);
+	if (tab5 != NULL)
+		return 0;
+	ret = 1;
+	printf("*test 5 : ✅*\n");
+
+	//test6
+	int *tab6;
+	tab6 = (int *)ft_calloc(INT_MAX, INT_MAX);
+	if (tab6 != NULL)
+		return 0;
+	ret = 1;
+	printf("*test 6 : ✅*\n");
+
+	//test7
+	int *tab7;
+	tab7 = (int *)ft_calloc(INT_MIN, INT_MIN);
+	if (tab7 != NULL)
+		return 0;
+	ret = 1;
+	printf("*test 7 : ✅*\n");
+
+	//test8
+	int *tab8;
+	tab8 = (int *)ft_calloc(-5, 3);
+	if (tab8 != NULL)
+		return 0;
+	ret = 1;
+	printf("*test 8 : ✅*\n");
+
+	//test9
+	int *tab4;
+	tab4 = (int *)ft_calloc(3, -5);
+	if (tab4 != NULL)
+		return 0;
+	ret = 1;
+	printf("*test 9 : ✅*\n");
 
 	printf("*************\n\n");
 	return (ret);
