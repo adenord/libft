@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 15:56:09 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/19 10:56:36 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/19 11:33:43 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void		*ft_memchr(const void *s, int c, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t		ft_strlen(const char *s);		
 char		*ft_strdup(const char *s1);
+void		*ft_calloc(size_t count, size_t size);
 char		*ft_strcpy(char *dst, const char *src);
 char		*ft_strncpy(char *dst, const char *src, size_t len);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
