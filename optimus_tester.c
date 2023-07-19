@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/19 11:22:11 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/19 13:37:23 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1457,6 +1457,27 @@ int	strlcpy_tester(void)
 	return (ret);
 }
 
+int	calloc_tester(void)
+{
+	int ret;
+	//test1
+	printf("*************\n");
+	int *tab;
+	tab = (int *)ft_calloc(5, sizeof(int));
+	int i = 0;
+	while (i < 5)
+	{
+		if (tab[i] != 0)
+			return 0;
+		i++;
+	}
+	ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	printf("*************\n\n");
+	return (ret);
+}
+
 int	main(void)
 {
 	//test for strcat
@@ -1632,6 +1653,12 @@ int	main(void)
 		printf("ft_strlcpy = ✅\n\n");
 	else
 		printf("ft_strlcpy = 🙅\n\n");
+
+	//test for calloc
+	if (calloc_tester())
+		printf("ft_calloc = ✅\n\n");
+	else
+		printf("ft_calloc = 🙅\n\n");
 
 	return (0);
 }
