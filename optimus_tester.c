@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/19 15:48:56 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 17:04:32 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1544,6 +1544,107 @@ int	calloc_tester(void)
 	return (ret);
 }
 
+int	strjoin_tester(void)
+{
+	int ret;
+	printf("*************\n");
+
+	//test1
+
+	if (strcmp(ft_strjoin("", ""), ""))
+		return 0;
+	ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	//test2
+	if (strcmp(ft_strjoin("salut", ""), "salut"))
+		return 0;
+	ret = 1;
+	printf("*test 2 : ✅*\n");
+
+	//test3
+	if (strcmp(ft_strjoin("salut", " "), "salut "))
+		return 0;
+	ret = 1;
+	printf("*test 3 : ✅*\n");
+
+	//test4
+	if (strcmp(ft_strjoin("salut", " Zidane"), "salut Zidane"))
+		return 0;
+	ret = 1;
+	printf("*test 4 : ✅*\n");
+
+	//test5
+	void *crash = malloc(10000000000);
+	memset(crash, 'A', 10000000000);
+	free(crash);
+	if (strcmp(ft_strjoin("salut", " Zidane"), "salut Zidane"))
+		return 0;
+	ret = 1;
+	printf("*test 5 : ✅*\n");
+
+	//test6
+	if (ft_strjoin(NULL, NULL) != NULL)
+		return 0;
+	ret = 1;
+	printf("*test 6 : ✅*\n");
+
+	//test7
+	char string[] = "Zidane n10";
+	if (strcmp(ft_strjoin(string, string + 6), "Zidane n10 n10"))
+		return 0;
+	ret = 1;
+	printf("*test 7 : ✅*\n");
+
+	printf("*************\n\n");
+	return (ret);
+}
+
+int	split_tester(void)
+{
+	int ret;
+	printf("*************\n");
+
+	//test1
+
+	char **tab = ft_split("\0aa\0bbb", '\0');
+	for (int i = 0; tab[i]; i++)
+	{
+		if (tab[i] != NULL)
+			return (0);
+	}
+	ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	//test2
+	char **tab2 = ft_split("salut les aminches", ' ');
+	if (strcmp(tab2[0], "salut"))
+		return (0);
+	if (strcmp(tab2[1], "les"))
+		return (0);
+	if (strcmp(tab2[2], "aminches"))
+		return (0);
+	ret = 1;
+	printf("*test 2 : ✅*\n");
+
+	//test3
+	char **tab3 = ft_split("", ' ');
+	if (tab3[0] != NULL)
+		return (0);
+	ret = 1;
+	printf("*test 3 : ✅*\n");
+
+	//test4
+	char **tab4 = ft_split(NULL, ' ');
+	if (tab4 != NULL)
+		return (0);
+	ret = 1;
+	printf("*test 4 : ✅*\n");
+
+	printf("*************\n\n");
+	return (ret);
+}
+
 int	main(void)
 {
 	//test for strcat
@@ -1725,6 +1826,18 @@ int	main(void)
 		printf("ft_calloc = ✅\n\n");
 	else
 		printf("ft_calloc = 🙅\n\n");
+
+	//test for strjoin
+	if (strjoin_tester())
+		printf("ft_strjoin = ✅\n\n");
+	else
+		printf("ft_strjoin = 🙅\n\n");
+
+	//test for split
+	if (split_tester())
+		printf("ft_split = ✅\n\n");
+	else
+		printf("ft_split = 🙅\n\n");
 
 	return (0);
 }
