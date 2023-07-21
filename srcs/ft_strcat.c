@@ -6,9 +6,11 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 21:50:39 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/13 10:17:21 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:39:31 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcat(char *s1, const char *s2)
 {

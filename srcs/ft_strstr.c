@@ -6,19 +6,11 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 08:35:07 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/13 10:21:08 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:44:50 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static unsigned int	ft_strlen(const char *str)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {

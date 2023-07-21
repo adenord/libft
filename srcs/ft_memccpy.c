@@ -6,11 +6,11 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 11:46:54 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/18 19:28:29 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:35:58 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

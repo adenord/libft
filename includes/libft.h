@@ -6,14 +6,14 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 15:56:09 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/19 21:37:34 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:49:56 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
+# include <stdlib.h>
 
 void		*ft_memset(void *b, int c, size_t len);
 void		ft_bzero(void *s, size_t n);
@@ -47,5 +47,6 @@ int			ft_toupper(int c);
 int			ft_tolower(int c);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		**ft_split(char const *s, char c);
+char		*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

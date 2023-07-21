@@ -6,9 +6,11 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 11:19:47 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/15 11:24:12 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:45:22 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

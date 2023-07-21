@@ -6,9 +6,11 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 08:42:13 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/13 10:17:47 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:40:45 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {

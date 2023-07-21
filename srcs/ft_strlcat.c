@@ -6,33 +6,11 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 09:06:28 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/18 15:30:20 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:42:23 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-static unsigned int	ft_strlen(const	char *str)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-static void	*ft_memchr(const void *s, int c, size_t n)
-{
-	while (n > 0)
-	{
-		if (*(char *)s == (char)c)
-			return ((void *)s);
-		s++;
-		n--;
-	}
-	return (NULL);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

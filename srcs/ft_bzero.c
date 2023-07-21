@@ -6,11 +6,11 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 15:11:56 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/17 10:14:42 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:33:09 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

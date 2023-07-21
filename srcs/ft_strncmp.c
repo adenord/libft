@@ -6,11 +6,11 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 18:16:41 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/18 12:27:38 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:43:30 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

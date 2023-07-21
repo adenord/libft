@@ -6,41 +6,13 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 01:59:09 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/20 17:04:03 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/21 10:41:36 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-static size_t	ft_strlen(const char *s)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-static char	*ft_strndup(const char *src, unsigned int size)
-{
-	unsigned int		i;
-	char				*dest;
-
-	i = 0;
-	dest = (char *)malloc(sizeof(char) * (size + 1));
-	if (!dest)
-		return (NULL);
-	while (i < size)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-int	count_words(const char *str, char sep)
+static int	count_words(const char *str, char sep)
 {
 	int	i;
 	int	count;
@@ -69,21 +41,21 @@ char	**ft_split(char const *s, char c)
 	int		y;
 	int		temp;
 
-	if (!s || !(tab = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1))))
+	if (!s)
+		return (NULL);
+	tab = (char **)ft_calloc((count_words(s, c) + 1), sizeof(char *));
+	if (!tab)
 		return (NULL);
 	i = 0;
-	y = 0;
-	while (y < (count_words(s, c)))
+	y = -1;
+	while (++y < (count_words(s, c)))
 	{
-		if (c == 0)
-			tab[y++] = NULL;
 		while (s[i] == c && s[i])
 			i++;
 		temp = i;
 		while (s[i] && s[i] != c)
 			i++;
-		tab[y] = ft_strndup(&s[temp], (i - temp));
-		y++;
+		tab[y] = ft_substr(s, temp, (i - temp));
 	}
 	tab[y] = NULL;
 	return (tab);

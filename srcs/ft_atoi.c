@@ -6,9 +6,11 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 15:28:55 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/18 10:38:49 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:32:47 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	ft_isspace(char c)
 {

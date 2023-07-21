@@ -6,9 +6,11 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 18:32:21 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/15 11:14:44 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:35:30 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

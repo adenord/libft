@@ -6,26 +6,11 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 13:09:10 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/18 18:44:57 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:37:29 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-static void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	void	*ret;
-
-	ret = dst;
-	while (n > 0)
-	{
-		*(char *)dst = *(char *)src;
-		dst += 1;
-		src += 1;
-		n--;
-	}
-	return (ret);
-}
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

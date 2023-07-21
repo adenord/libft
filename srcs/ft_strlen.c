@@ -6,11 +6,11 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 15:17:27 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/19 22:03:52 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/20 18:42:54 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

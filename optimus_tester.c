@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/20 17:04:32 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/21 10:34:52 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1611,7 +1611,10 @@ int	split_tester(void)
 	for (int i = 0; tab[i]; i++)
 	{
 		if (tab[i] != NULL)
-			return (0);
+		{
+			if (strcmp(tab[i], ""))
+				return (0);
+		}
 	}
 	ret = 1;
 	printf("*test 1 : ✅*\n");
@@ -1641,6 +1644,59 @@ int	split_tester(void)
 	ret = 1;
 	printf("*test 4 : ✅*\n");
 
+	//test5
+	char **tab5 = ft_split("Zidane", 0);
+	if (strcmp(tab5[0], "Zidane"))
+		return (0);
+	if (tab[1] != NULL)
+		return (0);
+	ret = 1;
+	printf("*test 4 : ✅*\n");
+
+	printf("*************\n\n");
+	return (ret);
+}
+
+int	substr_tester(void)
+{
+	int ret;
+	printf("*************\n");
+
+	//test1
+
+	char *str = ft_substr("Zidane n10", 7, 3);
+	if (strcmp(str, "n10"))
+		return (0);
+	ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	//test2
+	char *str2 = ft_substr("Zidane n10", 0, 3);
+	if (strcmp(str2, "Zid"))
+		return (0);
+	ret = 1;
+	printf("*test 2 : ✅*\n");
+
+	//test3
+	char *str3 = ft_substr("Zidane n10", 0, 10);
+	if (strcmp(str3, "Zidane n10"))
+		return (0);
+	ret = 1;
+	printf("*test 3 : ✅*\n");
+
+	//test4
+	char *str4 = ft_substr("Zidane n10", 0, 0);
+	if (strcmp(str4, ""))
+		return (0);
+	ret = 1;
+	printf("*test 4 : ✅*\n");
+
+	//test5
+	char *str5 = ft_substr(NULL, 0, 0);
+	if (str5 != NULL)
+		return (0);
+	ret = 1;
+	printf("*test 5 : ✅*\n");
 	printf("*************\n\n");
 	return (ret);
 }
@@ -1838,6 +1894,12 @@ int	main(void)
 		printf("ft_split = ✅\n\n");
 	else
 		printf("ft_split = 🙅\n\n");
+
+	//test for substr
+	if (substr_tester())
+		printf("ft_substr = ✅\n\n");
+	else
+		printf("ft_substr = 🙅\n\n");
 
 	return (0);
 }
