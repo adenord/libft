@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/21 10:34:52 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/22 21:49:29 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1701,6 +1701,96 @@ int	substr_tester(void)
 	return (ret);
 }
 
+int	strtrim_tester(void)
+{
+	int ret;
+	printf("*************\n");
+
+	//test1
+
+	char *str = ft_strtrim("Zidane n10", " iae");
+	if (strcmp(str, "Zidane n10"))
+		return (0);
+	ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	//test2
+	char *str2 = ft_strtrim("Zidane \n\tn10", " \t\n");
+	if (strcmp(str2, "Zidane \n\tn10"))
+		return (0);
+	ret = 1;
+	printf("*test 2 : ✅*\n");
+
+	//test3
+	char *str3 = ft_strtrim("\t\nZidane \t\nn10\n\t", " \t\n");
+	if (strcmp(str3, "Zidane \t\nn10"))
+		return (0);
+	ret = 1;
+	printf("*test 3 : ✅*\n");
+
+	//test4
+	char *str4 = ft_strtrim("lorem \n ipsum \t dolor \n sit \t amet", " ");
+	if (strcmp(str4, "lorem \n ipsum \t dolor \n sit \t amet"))
+		return (0);
+	ret = 1;
+	printf("*test 4 : ✅*\n");
+
+	//test5
+	char *str5 = ft_strtrim("             ", " ");
+	if (strcmp(str5, ""))
+		return (0);
+	ret = 1;
+	printf("*test 5 : ✅*\n");
+
+	printf("*************\n\n");
+	return (ret);
+}
+
+int	itoa_tester(void)
+{
+	int ret;
+	printf("*************\n");
+
+	//test1
+
+	char *str = ft_itoa(546);
+	if (strcmp(str, "546"))
+		return (0);
+	ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	//test2
+	char *str2 = ft_itoa(100);
+	if (strcmp(str2, "100"))
+		return (0);
+	ret = 1;
+	printf("*test 2 : ✅*\n");
+
+	//test3
+	char *str3 = ft_itoa(-100);
+	if (strcmp(str3, "-100"))
+		return (0);
+	ret = 1;
+	printf("*test 3 : ✅*\n");
+
+	//test4
+	char *str4 = ft_itoa(2147483647);
+	if (strcmp(str4, "2147483647"))
+		return (0);
+	ret = 1;
+	printf("*test 4 : ✅*\n");
+
+	//test5
+	char *str5 = ft_itoa(-2147483648);
+	if (strcmp(str5, "-2147483648"))
+		return (0);
+	ret = 1;
+	printf("*test 5 : ✅*\n");
+
+	printf("*************\n\n");
+	return (ret);
+}
+
 int	main(void)
 {
 	//test for strcat
@@ -1900,6 +1990,18 @@ int	main(void)
 		printf("ft_substr = ✅\n\n");
 	else
 		printf("ft_substr = 🙅\n\n");
+
+	//test for strtrim
+	if (strtrim_tester())
+		printf("ft_strtrim = ✅\n\n");
+	else
+		printf("ft_strtrim = 🙅\n\n");
+
+	//test for itoa
+	if (itoa_tester())
+		printf("ft_itoa = ✅\n\n");
+	else
+		printf("ft_itoa = 🙅\n\n");
 
 	return (0);
 }
