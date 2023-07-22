@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 17:05:44 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/22 21:49:50 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/22 22:02:23 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,14 @@ char	*ft_itoa(int n)
 	int				i;
 	unsigned long	div;
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	size = number_len(n);
 	ret = (char *)ft_calloc(size + 1, sizeof(char));
 	if (!ret)
 		return (NULL);
 	i = -1;
 	init_div(&div, size, n);
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
 		ret[++i] = '-';
