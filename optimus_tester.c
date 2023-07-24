@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/22 21:49:29 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/23 11:33:37 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1791,6 +1791,44 @@ int	itoa_tester(void)
 	return (ret);
 }
 
+void iter(unsigned int i, char * s) {
+	*s += i;
+}
+
+int	striteri_tester(void)
+{
+	int ret;
+	printf("*************\n");
+
+	// test1
+
+	char str[] = "";
+	ft_striteri(str, &iter);
+	if (strcmp(str, ""))
+		return (0);
+	ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	//test2
+	char str2[] = "0000000000";
+	ft_striteri(str2, &iter);
+	if (strcmp(str2, "0123456789"))
+		return (0);
+	ret = 1;
+	printf("*test 2 : ✅*\n");
+
+	//test3
+	char *str3 = NULL;
+	ft_striteri(str3, &iter);
+	if (str3 != NULL)
+		return (0);
+	ret = 1;
+	printf("*test 3 : ✅*\n");
+
+	printf("*************\n\n");
+	return (ret);
+}
+
 int	main(void)
 {
 	//test for strcat
@@ -2002,6 +2040,12 @@ int	main(void)
 		printf("ft_itoa = ✅\n\n");
 	else
 		printf("ft_itoa = 🙅\n\n");
+
+	//test for striteri
+	if (striteri_tester())
+		printf("ft_striteri = ✅\n\n");
+	else
+		printf("ft_striteri = 🙅\n\n");
 
 	return (0);
 }
