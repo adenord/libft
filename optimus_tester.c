@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/23 11:33:37 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/24 17:17:07 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1602,7 +1602,7 @@ int	strjoin_tester(void)
 
 int	split_tester(void)
 {
-	int ret;
+	int ret = 1;
 	printf("*************\n");
 
 	//test1
@@ -1611,10 +1611,7 @@ int	split_tester(void)
 	for (int i = 0; tab[i]; i++)
 	{
 		if (tab[i] != NULL)
-		{
-			if (strcmp(tab[i], ""))
-				return (0);
-		}
+			return (0);
 	}
 	ret = 1;
 	printf("*test 1 : ✅*\n");
@@ -1648,11 +1645,15 @@ int	split_tester(void)
 	char **tab5 = ft_split("Zidane", 0);
 	if (strcmp(tab5[0], "Zidane"))
 		return (0);
-	if (tab[1] != NULL)
+	if (tab5[1] != NULL)
 		return (0);
 	ret = 1;
-	printf("*test 4 : ✅*\n");
+	printf("*test 5 : ✅*\n");
 
+	// test6
+	char **tab6 = ft_split("          ", ' ');
+	if (tab6[0] != 0)
+		return (0);
 	printf("*************\n\n");
 	return (ret);
 }

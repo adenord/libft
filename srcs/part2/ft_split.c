@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 01:59:09 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/21 10:41:36 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/24 15:19:13 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,19 @@ static int	count_words(const char *str, char sep)
 {
 	int	i;
 	int	count;
-	int	size;
 
 	i = 0;
-	size = ft_strlen(str);
-	count = 1;
-	while (str[i] == sep)
-		i++;
-	if (i == size)
+	if (!str)
 		return (0);
+	count = 0;
 	while (str[i])
 	{
-		if (str[i] == sep && str[i + 1] != sep && i + 1 != size)
+		while (str[i] == sep)
+			i++;
+		if (str[i] != sep && str[i])
 			count++;
-		i++;
+		while (str[i] != sep && str[i])
+			i++;
 	}
 	return (count);
 }
