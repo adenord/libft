@@ -2,8 +2,13 @@
 
 <div align=center><h1>Libft 🛠️</h1>
 <i>First 42 project</i></div>
-<p><img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/adenord/libft">
-<img alt="Neovim" src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white"></p>
+<p align="center">
+<img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white">
+<img alt="number of lines" src="https://tokei.rs/b1/github/adenord/libft">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/adenord/libft">
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/adenord/libft">
+<img alt="Neovim" src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white">
+</p>
 <h2>Index 📍</h2>
 <ul>
   <li><a href="#libft">What is Libft ? 👨‍💻</a></li>
