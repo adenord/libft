@@ -2,7 +2,8 @@
 
 <div align=center><h1>Libft 🛠️</h1>
 <i>First 42 project</i></div>
-<img alt="Neovim" src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white">
+<p><img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/adenord/libft">
+<img alt="Neovim" src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white"></p>
 <h2>Index 📍</h2>
 <ul>
   <li><a href="#libft">What is Libft ? 👨‍💻</a></li>
