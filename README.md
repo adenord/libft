@@ -64,11 +64,11 @@ Indeed, at 42 we're not allowed to use some standard libraries on our projects, 
 <h3>Customs functions :</h3>
 <ul>
    <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_substr.c"><code>ft_substr</code></a> - returns a substring from a string.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part1/ft_strjoin.c"><code>ft_strjoin</code></a> - concatenates two strings.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_strjoin.c"><code>ft_strjoin</code></a> - concatenates two strings.</li>
    <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_strtrim.c"><code>ft_strtrim</code></a> - trims the beginning and end of a string with a specific set of chars.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part1/ft_split.c"><code>ft_split</code></a> - splits a string using a char as parameter.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_split.c"><code>ft_split</code></a> - splits a string using a char as parameter.</li>
    <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_itoa.c"><code>ft_itoa</code></a> - converts a number into a string.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part1/ft_strmapi.c"><code>ft_strmapi</code></a> - applies a function to each character of a string.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_strmapi.c"><code>ft_strmapi</code></a> - applies a function to each character of a string.</li>
    <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_striteri.c"><code>ft_striteri</code></a> - applies a function to each character of a string.</li>
    <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_putchar_fd.c"><code>ft_putchar_fd</code></a> - output a char to a file descriptor.</li>
    <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_putstr_fd.c"><code>ft_putstr_fd</code></a> - output a string to a file descriptor.</li>
@@ -79,25 +79,25 @@ Indeed, at 42 we're not allowed to use some standard libraries on our projects, 
 <h3>Linked list functions :</h3>
 <ul>
    <li><a href ="https://github.com/adenord/libft/blob/master/srcs/bonus/ft_lstnew.c"><code>ft_lstnew</code></a> - creates a new list element.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part1/ft_lstadd_front.c"><code>ft_lstadd_front</code></a> - adds an element at the beginning of a list.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_lstsize.c"><code>ft_lstsize</code></a> - counts the number of elements in a list.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part1/ft_lstlast.c"><code>ft_lstlast</code></a> - returns the last element of the list.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_lstadd_back.c"><code>ft_lstadd_back</code></a> - adds an element at the end of a list.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part1/ft_lstclear.c"><code>ft_lstclear</code></a> - deletes and free list.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_lstdelone.c"><code>ft_lstdelone</code></a> - deletes and free a node.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_lstiter.c"><code>ft_lstiter</code></a> - applies a function to each element of a list.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_lstmap.c"><code>ft_lstmap</code></a> - applies a function to each element of a list by creating a new list.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/bonus/ft_lstadd_front.c"><code>ft_lstadd_front</code></a> - adds an element at the beginning of a list.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/bonus/ft_lstsize.c"><code>ft_lstsize</code></a> - counts the number of elements in a list.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/bonus/ft_lstlast.c"><code>ft_lstlast</code></a> - returns the last element of the list.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/bonus/ft_lstadd_back.c"><code>ft_lstadd_back</code></a> - adds an element at the end of a list.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/bonus/ft_lstclear.c"><code>ft_lstclear</code></a> - deletes and free list.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/bonus/ft_lstdelone.c"><code>ft_lstdelone</code></a> - deletes and free a node.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/bonus/ft_lstiter.c"><code>ft_lstiter</code></a> - applies a function to each element of a list.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/bonus/ft_lstmap.c"><code>ft_lstmap</code></a> - applies a function to each element of a list by creating a new list.</li>
 </ul>
 
 <h3>Additional functions (not asked in the subject):</h3>
 <ul>
    <li><a href ="https://github.com/adenord/libft/blob/master/srcs/additional_fct/ft_strstr.c"><code>ft_strstr</code></a> - locate a substring in a string.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part1/ft_memccpy.c"><code>ft_memccpy</code></a> - copy n bytes of memory area.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_strcat.c"><code>ft_strcat</code></a> - concatenate two strings.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part1/ft_strcmp.c"><code>ft_strcmp</code></a> - compare two strings.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_strcpy.c"><code>ft_strcpy</code></a> - copy a string.</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part1/ft_strncat.c"><code>ft_strncat</code></a> - concatenate two strings (up to n characters).</li>
-   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/part2/ft_strncpy.c"><code>ft_strncpy</code></a> - copy a string (up to n characters).</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/additional_fct/ft_memccpy.c"><code>ft_memccpy</code></a> - copy n bytes of memory area.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/additional_fct/ft_strcat.c"><code>ft_strcat</code></a> - concatenate two strings.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/additional_fct/ft_strcmp.c"><code>ft_strcmp</code></a> - compare two strings.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/additional_fct/ft_strcpy.c"><code>ft_strcpy</code></a> - copy a string.</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/additional_fct/ft_strncat.c"><code>ft_strncat</code></a> - concatenate two strings (up to n characters).</li>
+   <li><a href ="https://github.com/adenord/libft/blob/master/srcs/additional_fct/ft_strncpy.c"><code>ft_strncpy</code></a> - copy a string (up to n characters).</li>
 
 <h2 id="usage">Usage 👷</h2>
 <p>With the Makefile rules you'll be able to create a static library : libft.a.</p>
