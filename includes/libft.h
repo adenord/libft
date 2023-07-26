@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 15:56:09 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/25 16:12:22 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/26 16:16:42 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
 
 /* ************************ */
 /*                          */
@@ -58,7 +57,6 @@ char		*ft_strrchr(const char *s, int c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 
-
 /* ************************ */
 /*                          */
 /*     Part 2 prototypes    */
@@ -77,7 +75,6 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char		*ft_strtrim(char const *s1, char const *set);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 
-
 /* ************************ */
 /*                          */
 /*     Bonus prototypes     */
@@ -94,7 +91,6 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *));
 
-
 /* ************************ */
 /*                          */
 /*  Additional prototypes   */
@@ -108,6 +104,5 @@ char		*ft_strcat(char *s1, const char *s2);
 char		*ft_strncat(char *s1, const char *s2, size_t n);
 char		*ft_strstr(const char *haystack, const char *needle);
 int			ft_strcmp(const char *s1, const char *s2);
-
 
 #endif
