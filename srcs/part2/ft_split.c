@@ -6,11 +6,21 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 01:59:09 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/24 15:19:13 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/26 10:50:17 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
+    "-.-"     "-.-"     "-.-"     "-.-"     "-.-"
+
+		splits a string using a char as parameter 
+
+.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
+    "-.-"     "-.-"     "-.-"     "-.-"     "-.-"
+*/
 
 static int	count_words(const char *str, char sep)
 {

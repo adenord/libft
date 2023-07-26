@@ -6,11 +6,21 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 10:23:47 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/20 18:43:41 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/26 11:00:41 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
+    "-.-"     "-.-"     "-.-"     "-.-"     "-.-"
+
+		   copy a string (up to n characters)
+
+.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
+    "-.-"     "-.-"     "-.-"     "-.-"     "-.-"
+*/
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {

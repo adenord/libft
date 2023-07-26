@@ -6,11 +6,21 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 09:06:28 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/20 18:42:23 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/26 10:41:11 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
+    "-.-"     "-.-"     "-.-"     "-.-"     "-.-"
+
+	    	size-bounded string concatenation
+
+.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
+    "-.-"     "-.-"     "-.-"     "-.-"     "-.-"
+*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

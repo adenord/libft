@@ -6,11 +6,21 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 10:54:15 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/21 16:59:42 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/26 10:52:56 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
+    "-.-"     "-.-"     "-.-"     "-.-"     "-.-"
+
+trims beginning & end of a str with a specific set of chars
+
+.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
+    "-.-"     "-.-"     "-.-"     "-.-"     "-.-"
+*/
 
 static int	is_here(char c, const char *set)
 {
