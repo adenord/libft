@@ -6,9 +6,25 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/24 17:17:07 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/26 09:55:57 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//#############################################################
+//															  #
+//		This is a simple tester for the libft functions       #
+//		It tests all functions except bonuses and *_fd        #
+//		functions. It performs multiples tests for every      #
+//		functions and cmp the output with the real one        #
+//		or the behaviour which is expected.                   #
+//		Just compile the optimus_tester.c with your           #
+//		libft.a.											  #
+//		It is just a simple tester.                           #
+//		if ✅ the fct is ok                                   # 
+//		if 🙅 the fct might be wrong						  #
+//															  #
+//#############################################################							  
+
 
 #include <string.h>
 #include "libft.h"
