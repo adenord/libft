@@ -6,21 +6,17 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 09:23:23 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/26 10:51:40 by adenord          ###   ########.fr       */
+/*   Updated: 2023/07/26 11:54:56 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
-    "-.-"     "-.-"     "-.-"     "-.-"     "-.-"
-
-	applies a function to each character of a string 
-
-.-"-.     .-"-.     .-"-.     .-"-.     .-"-.     .-"-.
-    "-.-"     "-.-"     "-.-"     "-.-"     "-.-"
-*/
+/* ************************************************** */
+/*                                                    */
+/*  applies a function to each character of a string  */
+/*                                                    */
+/* ************************************************** */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
