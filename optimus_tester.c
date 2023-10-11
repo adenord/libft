@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/10/11 13:43:56 by adenord          ###   ########.fr       */
+/*   Updated: 2023/10/11 20:47:41 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1472,6 +1472,47 @@ int	itoa_tester(void)
 	return (ret);
 }
 
+char	let_s_go(unsigned int x, char c){(void)x; return(1+c);}
+
+int	strmapi_tester()
+{
+	int ret = 1;
+	printf("*************\n");
+
+	//test1
+	char str[10] = "012345678";
+	char *str2 = ft_strmapi(str, (*let_s_go));
+	if (strcmp("123456789", str2))
+		return (0);
+	ret = 1;
+	printf("*test 1 : ✅*\n");
+
+	//test2
+	free(str2);
+	str2 = ft_strmapi(str, (*let_s_go));
+	if (strlen(str) != strlen(str2))
+		return (0);
+	ret = 1;
+	printf("*test 2 : ✅*\n");
+
+	//test3
+	free(str2);
+	if (str2[10] != 0)
+		return (0);
+	ret = 1;
+	printf("*test 3 : ✅*\n");
+
+	//test4
+	str2 = ft_strmapi(NULL, NULL);
+	if (str2 != NULL)
+		return (0);
+	ret = 1;
+	printf("*test 4 : ✅*\n");
+
+	printf("*************\n\n");
+	return (ret);
+}
+
 void iter(unsigned int i, char * s) {
 	*s += i;
 }
@@ -2026,6 +2067,10 @@ int	main(void)
 		printf("ft_itoa = 🙅\n\n");
 
 	//test for strmapi
+	if (strmapi_tester())
+		printf("ft_strmapi = ✅\n\n");
+	else
+		printf("ft_strmapi = 🙅\n\n");
 
 	//test for striteri
 	if (striteri_tester())
@@ -2033,9 +2078,9 @@ int	main(void)
 	else
 		printf("ft_striteri = 🙅\n\n");
 
-	//test for putchar_fd
-	//test for putendl_fd
-	//test for putnbr_fd
+	//test for putchar_fd  --|
+	//test for putendl_fd    |---> manual test ;)
+	//test for putnbr_fd   --|
 	
 	// BONUS PART
 
