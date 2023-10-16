@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/10/11 20:47:41 by adenord          ###   ########.fr       */
+/*   Updated: 2023/10/16 14:48:06 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -612,11 +612,18 @@ int	strlcat_tester(void)
 	
 	//test7
 	
-	char str13[10], str14[10];
-	if (ft_strlcat(str13, "Zidane n10", 10) != strlcat(str14, "Zidane n10", 10))
+	char str13[10] = "";
+	char str14[10] = "";
+	if (ft_strlcat(str13,"Zidane n10", 10) != strlcat(str14,"Zidane n10", 10))
+	{
+		printf("%s\n%s\n", str13, str14);
 		return (0);
+	}
 	if (strcmp(str13, str14))
+	{
+		printf("%s\n%s\n", str13, str14);
 		return (0);
+	}
 	ret = 1;
 	printf("*test 7 : ✅*\n");
 
