@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 01:59:09 by adenord           #+#    #+#             */
-/*   Updated: 2023/07/26 11:52:54 by adenord          ###   ########.fr       */
+/*   Updated: 2023/10/17 09:19:27 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,20 @@
 /*  splits a string using a char as parameter  */
 /*                                             */
 /* ******************************************* */
+
+static void	*free_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+	return (NULL);
+}
 
 static int	count_words(const char *str, char sep)
 {
@@ -61,6 +75,8 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		tab[y] = ft_substr(s, temp, (i - temp));
+		if (!tab[y])
+			return (free_tab(tab));
 	}
 	tab[y] = NULL;
 	return (tab);

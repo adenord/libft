@@ -6,7 +6,7 @@
 #    By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 09:58:12 by adenord           #+#    #+#              #
-#    Updated: 2023/10/17 08:39:43 by adenord          ###   ########.fr        #
+#    Updated: 2023/10/17 09:21:35 by adenord          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ additional : $(OBJS_ADDITIONAL)
 	$(AR) $(ARFLAGS) $(NAME_LIB) $^
 
 clean :
-	$(RM) $(OBJS_BONUS)
+	$(RM) $(OBJS_ADDITIONAL)
 
 fclean : clean
 	$(RM) $(NAME_LIB)
