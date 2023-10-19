@@ -6,7 +6,7 @@
 /*   By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 17:10:46 by adenord           #+#    #+#             */
-/*   Updated: 2023/10/16 14:48:06 by adenord          ###   ########.fr       */
+/*   Updated: 2023/10/19 13:59:49 by adenord          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,9 @@ int	isalpha_tester(void)
 	i = 0;
 	while (i < 128)
 	{
-		if (ft_isalpha(str[i]) != isalpha(str[i]))
+		if (ft_isalpha(str[i]) < 0 && isalpha(str[i]) > 0)
+			return (0);
+		if (ft_isalpha(str[i]) > 0 && isalpha(str[i]) < 0)
 			return (0);
 		i++;
 	}
@@ -71,7 +73,9 @@ int	isdigit_tester(void)
 	i = 0;
 	while (i < 128)
 	{
-		if (ft_isdigit(str[i]) != isdigit(str[i]))
+		if (ft_isdigit(str[i]) < 0 && isdigit(str[i]) > 0)
+			return (0);
+		if (ft_isdigit(str[i]) > 0 && isdigit(str[i]) < 0)
 			return (0);
 		i++;
 	}
@@ -93,7 +97,9 @@ int	isalnum_tester(void)
 	i = 0;
 	while (i < 128)
 	{
-		if (ft_isalnum(str[i]) != isalnum(str[i]))
+		if (ft_isalnum(str[i]) > 0 && isalnum(str[i]) < 0)
+			return (0);
+		if (ft_isalnum(str[i]) < 0 && isalnum(str[i]) > 0)
 			return (0);
 		i++;
 	}
@@ -116,7 +122,9 @@ int	isascii_tester(void)
 	i = 0;
 	while (i < 256)
 	{
-		if (ft_isascii(str[i]) != isascii(str[i]))
+		if (ft_isascii(str[i]) > 0 && isascii(str[i]) < 0)
+			return (0);
+		if (ft_isascii(str[i]) < 0 && isascii(str[i]) > 0)
 			return (0);
 		i++;
 	}
@@ -138,7 +146,9 @@ int	isprint_tester(void)
 	i = 0;
 	while (i < 128)
 	{
-		if (ft_isprint(str[i]) != isprint(str[i]))
+		if (ft_isprint(str[i]) > 0 && isprint(str[i]) < 0)
+			return (0);
+		if (ft_isprint(str[i]) < 0 && isprint(str[i]) > 0)
 			return (0);
 		i++;
 	}
