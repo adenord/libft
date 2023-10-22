@@ -6,7 +6,7 @@
 #    By: adenord <alexandre.denord@gmail.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 09:58:12 by adenord           #+#    #+#              #
-#    Updated: 2023/10/17 09:21:35 by adenord          ###   ########.fr        #
+#    Updated: 2023/10/22 17:42:02 by adenord          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,23 +47,23 @@ OBJS := $(SRCS1:.c=.o) $(SRCS2:.c=.o)
 OBJS_BONUS := $(OBJS) $(SRCS_BONUS:.c=.o)
 OBJS_ADDITIONAL := $(OBJS_BONUS) $(SRCS_ADDITIONAL:.c=.o)
 
-NAME_LIB = libft.a
+NAME = libft.a
 
 all : $(NAME_LIB)
 
-$(NAME_LIB) : $(OBJS)
+$(NAME) : $(OBJS)
 	$(AR) $(ARFLAGS) $@ $^
 
 bonus : $(OBJS_BONUS)
-	$(AR) $(ARFLAGS) $(NAME_LIB) $^
+	$(AR) $(ARFLAGS) $(NAME) $^
 
 additional : $(OBJS_ADDITIONAL)
-	$(AR) $(ARFLAGS) $(NAME_LIB) $^
+	$(AR) $(ARFLAGS) $(NAME) $^
 
 clean :
 	$(RM) $(OBJS_ADDITIONAL)
 
 fclean : clean
-	$(RM) $(NAME_LIB)
+	$(RM) $(NAME)
 
 re : fclean all
